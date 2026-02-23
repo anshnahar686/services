@@ -5,7 +5,7 @@ import { Table } from "react-bootstrap"
 export const Complete = () => {
     const [data,setdata]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:8080/complete').then((response)=>{
+        axios.get('https://services-qtcu.onrender.com/complete').then((response)=>{
             // console.log(response)
             setdata(response.data)
         })

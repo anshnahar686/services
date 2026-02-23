@@ -8,7 +8,7 @@ const UpdateEmp=()=>{
     const {id} =useParams();
     // localStorage.clear()
     useEffect(()=>{
-        axios.get(`http://localhost:8080/empdata/${id}`).then((response)=>{
+        axios.get(`https://services-qtcu.onrender.com/empdata/${id}`).then((response)=>{
       
             sethandle(response.data)
         })
@@ -19,7 +19,7 @@ const UpdateEmp=()=>{
         handle.usertype="employee";
         // console.log(`djfdsldjf ${handle}`)
         delete handle._id;
-        axios.put(`http://localhost:8080/updatee/${id}`,handle).then((response)=>{
+        axios.put(`https://services-qtcu.onrender.com/updatee/${id}`,handle).then((response)=>{
                 console.log(response.data.datax)
                 if (response.data.status == 1) {
                     alert(`${response.data.message}`)

@@ -17,7 +17,7 @@ const New=()=>{
     const submit=(event)=>{
         event.preventDefault()
            if (pass.npass === pass.rnpass) {
-                axios.put(`http://localhost:8080/updatepassword/${email}`,pass).then((response)=>{
+                axios.put(`https://services-qtcu.onrender.com/updatepassword/${email}`,pass).then((response)=>{
                     console.log(response)
                     if (response.data.status ===1 ) {
                             alert('Password is updated')

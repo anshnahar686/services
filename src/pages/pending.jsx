@@ -4,7 +4,7 @@ import axios from "axios";
 export const Pending = () => {
     const [pend, setpend] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8080/delaytask').then((response) => {
+        axios.get('https://services-qtcu.onrender.com/delaytask').then((response) => {
             setpend(response.data)
         })
     }, [])

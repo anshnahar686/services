@@ -16,14 +16,14 @@ export const AddServices = () => {
     e.preventDefault()
     const formData = new FormData();
     formData.append('file', file);
-    axios.post('http://localhost:8080/upload', formData).then((response) => {
+    axios.post('https://services-qtcu.onrender.com/upload', formData).then((response) => {
       // console.log()
       if (response.data.status == 1) {
         console.log(response.data.filedata.originalname)
         console.log(data)
         console.log(response.data.filedata.path)
         const result = { ...data, pathname: response.data.filedata.path, filename: response.data.filedata.originalname }
-        axios.post('http://localhost:8080/addservice', result).then((response) => {
+        axios.post('https://services-qtcu.onrender.com/addservice', result).then((response) => {
           if (response.data.status == 1) {
             // alert('Services is Added')
             console.log("service are added")
@@ -35,7 +35,7 @@ export const AddServices = () => {
     })
   }
   useEffect(() => {
-    axios.get('http://localhost:8080/data').then((response) => {
+    axios.get('https://services-qtcu.onrender.com/data').then((response) => {
       setresult(response.data.data)
       console.log(response)
     })

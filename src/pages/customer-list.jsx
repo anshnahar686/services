@@ -6,7 +6,7 @@ import { Link } from "react-router"
 export const List = () => {
     const [list, setlist] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8080/list').then((response) => {
+        axios.get('https://services-qtcu.onrender.com/list').then((response) => {
             
             if (response != null && response?.data) {
                 setlist(response.data)

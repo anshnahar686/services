@@ -13,7 +13,7 @@ export const Customer=()=>{
         const value={...customerData,status:'Active',createddate:create.toISOString().split('T')[0],updatedDate:update.toISOString().split('T')[0],otp:"0000"}
           
         // console.log(value)
-        axios.post('http://localhost:8080/customer',value).then((response)=>{
+        axios.post('https://services-qtcu.onrender.com/customer',value).then((response)=>{
                  if (response.data.status==1) {
                         alert( `${response.data.message}` )
                         

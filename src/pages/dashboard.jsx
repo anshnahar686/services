@@ -10,7 +10,7 @@ import axios from "axios";
 export const Dashboard = () => {
     const [dataJson,setDataJson]=useState({});
      useEffect(()=>{
-        axios.get('http://localhost:8080/cusotmerdata').then((response)=>{
+        axios.get('https://services-qtcu.onrender.com/cusotmerdata').then((response)=>{
             console.log(response.data)
             setDataJson(response.data)
         })

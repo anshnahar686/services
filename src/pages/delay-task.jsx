@@ -6,7 +6,7 @@ import { data } from "react-router"
 export const Delay = () => {
     const [del, setdel] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8080/delay').then((response) => {
+        axios.get('https://services-qtcu.onrender.com/delay').then((response) => {
             console.log(response)
             setdel(response.data)
         })

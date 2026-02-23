@@ -4,7 +4,7 @@ import { Row, Table } from "react-bootstrap";
 export const Today =()=>{
 const [today,settoday]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:8080/today').then((response)=>{
+        axios.get('https://services-qtcu.onrender.com/today').then((response)=>{
                 // console.log(response.data.data)
                 settoday(response.data.data)
         })

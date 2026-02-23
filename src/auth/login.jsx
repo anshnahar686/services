@@ -37,7 +37,7 @@ const LoginForm = () => {
         e.preventDefault();
         const datas = { username: username, password: password }
         console.log(datas)
-        axios.post('http://localhost:8080/login', datas).then((response) => {
+        axios.post('https://services-qtcu.onrender.com/login', datas).then((response) => {
             console.log("data has been posted")
             console.log("response data:", response);
             if (response.data.status == 1) {
@@ -91,7 +91,7 @@ const Register = () => {
         console.log("send api data", dataFild);
         dataFild.usertype = "admin"
         console.log("send api data", dataFild);
-        axios.post('http://localhost:8080/register', dataFild)
+        axios.post('https://services-qtcu.onrender.com/register', dataFild)
             .then(function (response) {
                 console.log("data send by api", response.data);
             })

@@ -15,7 +15,7 @@ const Forget = () => {
     const verifyemail=(e)=>{
         e.preventDefault()
         console.log(email)
-        axios.post('http://localhost:8080/forget',email).then((response)=>{
+        axios.post('https://services-qtcu.onrender.com/forget',email).then((response)=>{
             console.log(response)
             if(response.data.status == 1)
             {

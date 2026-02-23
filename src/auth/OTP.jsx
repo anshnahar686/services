@@ -23,7 +23,7 @@ const CheckOTp=(props)=>{
         setdata(otps)
         const obj={otp:otps}
         console.log(obj)
-        axios.post(`http://localhost:8080/opt/${email}`,obj).then((response)=>{
+        axios.post(`https://services-qtcu.onrender.com/opt/${email}`,obj).then((response)=>{
             console.log(response)
             if (response.data.status ==1) {
                     nac(`/updatepassword/${email}`)

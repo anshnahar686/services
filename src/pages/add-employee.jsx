@@ -7,7 +7,7 @@ export const Employee = () => {
         e.preventDefault();
         console.log(handle)
         handle.usertype="employee";
-              axios.post('http://localhost:8080/register', handle).then((response) => {
+              axios.post('https://services-qtcu.onrender.com/register', handle).then((response) => {
                 if (response.data.status === 1) {
                     alert(`${response.data.message}`)
 

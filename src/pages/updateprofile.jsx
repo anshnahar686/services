@@ -9,7 +9,7 @@ const UpdateCustomer = (props) => {
     const [customer, setcustomer] = useState([]);
     console.log(id)
     useEffect(()=>{
-            axios.get(`http://localhost:8080/updatecustomerdata/${id}`).then((response)=>{
+            axios.get(`https://services-qtcu.onrender.com/updatecustomerdata/${id}`).then((response)=>{
                 setupdatecustomer(response.data)
                 console.log(customer)
             })
@@ -22,7 +22,7 @@ const UpdateCustomer = (props) => {
         const update=new Date()
         updatedata.updatedDate=update.toISOString().split('T')[0]
         console.log(updatedata)   
-        axios.post(`http://localhost:8080/updatecdata/${id}`,updatedata).then((response)=>{
+        axios.post(`https://services-qtcu.onrender.com/updatecdata/${id}`,updatedata).then((response)=>{
             console.log(response.data)
          }).catch((err)=>{
              console.log(err)
