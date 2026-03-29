@@ -48,7 +48,7 @@ const { count } = require('node:console');
 const { json, text } = require('node:stream/consumers');
 const { title } = require('node:process');
 const corsOption = {
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000','https://serverice-frontend.onrender.com/'],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
 }
