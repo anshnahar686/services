@@ -94,6 +94,7 @@ const Register = () => {
         axios.post('https://services-qtcu.onrender.com/register', dataFild)
             .then(function (response) {
                 console.log("data send by api", response.data);
+                alert("Registration successful")
             })
             .catch(function (error) {
                 console.log(error);
