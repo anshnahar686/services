@@ -52,7 +52,7 @@ const corsOption = {
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
 }
-app.use(cors(corsOption));
+app.use(cors("*"));
 const port = 8080;
 app.get('/alldata', async (req, res) => {
     await client.connect();
